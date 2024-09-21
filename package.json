@@ -2,13 +2,12 @@
   "name": "ndt7-test",
   "version": "1.0.0",
   "description": "A test repository to ndt7",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "Jhonatas56",
-  "license": "ISC",
-  "dependencies": {
-    "@m-lab/ndt7": "^0.0.6"
-  }
+  "license": "ISC"
 }
