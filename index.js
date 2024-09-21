@@ -28,17 +28,10 @@ const runTest = async () => {
         },
         downloadComplete: function (data) {
           // (bytes/second) * (bits/byte) / (megabits/bit) = Mbps
-          const serverBw =
-            (data.LastServerMeasurement.BBRInfo.BW * 8) / 1000000;
           const clientGoodput = data.LastClientMeasurement.MeanClientMbps;
           const elapsed = data.LastServerMeasurement.TCPInfo.ElapsedTime;
           console.log(
             `Download test completed in ${(elapsed / 1000000).toFixed(2)}s`
-          );
-          console.log(
-            `Download test is complete:
-Instantaneous server bottleneck bandwidth estimate: ${serverBw} Mbps
-Mean client goodput: ${clientGoodput} Mbps`
           );
           console.log("Download: " + clientGoodput.toFixed(2) + " Mb/s");
         },
